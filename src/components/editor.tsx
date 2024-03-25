@@ -1,20 +1,19 @@
-import { HTMLAttributes } from "react";
 import { useAtom } from "jotai";
 
-import { editorTextAtom } from "../atoms";
+import { editorTextAtom } from "@/atoms";
 
-export const Editor: React.FC<HTMLAttributes<HTMLTextAreaElement>> = (
-  props,
-) => {
+import { Textarea } from "@/components/ui/textarea";
+
+export const Editor = () => {
   const [editorText, setEditorText] = useAtom(editorTextAtom);
 
   return (
-    <textarea
-      {...props}
-      value={editorText}
-      onChange={(e) => setEditorText(e.target.value)}
+    <Textarea
+      className="rounded-none p-2 h-[100vh] resize-none border-none"
       autoFocus
       placeholder="Enter markdown here..."
+      value={editorText}
+      onChange={(e) => setEditorText(e.target.value)}
     />
   );
 };
