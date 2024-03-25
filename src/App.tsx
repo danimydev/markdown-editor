@@ -1,53 +1,47 @@
-import { useEffect } from "react";
-import { appWindow } from "@tauri-apps/api/window";
+import { useState } from "react";
 import { useAtom } from "jotai";
+import "./App.css";
 
-import { themeAtom, windowSizeAtom } from "./atoms";
+import { fontFamilyAtom, fontSizeAtom } from "./atoms";
 
-import { Render } from "./components/Render";
-import { MarkdownEditor } from "./components/MarkdownEditor";
+import { Editor } from "./components/editor";
+import { Previewer } from "./components/previewer";
 
-function App() {
-  const [, setTheme] = useAtom(themeAtom);
-  const [, setWindowSize] = useAtom(windowSizeAtom);
-
-  useEffect(() => {
-    const setAppWindowProps = async () => {
-      const { height, width } = await appWindow.innerSize();
-      setWindowSize({ height, width });
-
-      const theme = await appWindow.theme();
-      if (theme) {
-        if (theme === "dark") {
-          setTheme("dark");
-        } else {
-          setTheme("light");
-        }
-      }
-    };
-
-    void setAppWindowProps();
-
-    appWindow.onResized(({ payload: { width, height } }) => {
-      setWindowSize({ width, height });
-    });
-    appWindow.onThemeChanged(({payload: theme}) => {
-      setTheme(theme);
-    });
-  }, []);
+export const App = () => {
+  const [fontFamily] = useAtom(fontFamilyAtom);
+  const [fontSize] = useAtom(fontSizeAtom);
+  const [togglePreview] = useState(false);
 
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "start"
+        height: "100vh",
+        overflowY: "hidden",
       }}
     >
-      <MarkdownEditor />
-      <Render />
+      {togglePreview ? (
+        <div
+          style={{
+            maxWidth: 500,
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Previewer />
+        </div>
+      ) : (
+        <Editor
+          style={{
+            fontFamily: fontFamily,
+            fontSize: fontSize,
+            resize: "vertical",
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      )}
     </div>
   );
-}
-
-export default App;
+};

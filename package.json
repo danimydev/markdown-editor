@@ -4,26 +4,25 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" && prettier --write \"src/**/*.tsx\" && prettier --write *.json && prettier --write .*.json && prettier --write *.ts",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "tauri": "tauri"
   },
   "dependencies": {
-    "@monaco-editor/react": "^4.6.0",
-    "@tauri-apps/api": "^1.5.2",
-    "jotai": "^2.6.5",
+    "@tauri-apps/api": "^1",
+    "jotai": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^9.0.1",
-    "remark-gemoji": "^8.0.0",
-    "remark-gfm": "^4.0.0"
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.5.8",
+    "@tauri-apps/cli": "^1",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.2.1",
+    "prettier": "^3.2.5",
     "typescript": "^5.0.2",
     "vite": "^5.0.0"
   }
