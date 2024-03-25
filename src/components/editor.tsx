@@ -6,14 +6,15 @@ import { editorTextAtom } from "../atoms";
 export const Editor: React.FC<HTMLAttributes<HTMLTextAreaElement>> = (
   props,
 ) => {
-  const [editorText, setEditorTex] = useAtom(editorTextAtom);
+  const [editorText, setEditorText] = useAtom(editorTextAtom);
 
   return (
     <textarea
       {...props}
-      placeholder="Enter markdown text..."
       value={editorText}
-      onChange={(e) => setEditorTex(e.target.value)}
+      onChange={(e) => setEditorText(e.target.value)}
+      autoFocus
+      placeholder="Enter markdown here..."
     />
   );
 };
