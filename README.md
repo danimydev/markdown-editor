@@ -16,14 +16,12 @@ Cross platform desktop app for editing and previewing `.md` files. Built with Ta
 - [x] Basic markdown syntax.
 - [x] Emojis.
 - [x] Footnotes & cites.
-- [x] Dark mode (theme).
+- [x] Dark mode.
 - [x] Editor & Preview.
+- [x] Open & Save files.
 
 ## Development
 
 ```bash
 npm run tauri dev
 ```
-
-## Improvements
-- [ ] Open and save existing files.
