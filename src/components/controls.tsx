@@ -6,8 +6,7 @@ import { UploadIcon, SaveIcon } from "lucide-react";
 import { editorTextAtom, fileUrlAtom } from "@/atoms";
 
 import { Button } from "@/components/ui/button";
-
-import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export const Controls = () => {
   const [editorText, setEditorText] = useAtom(editorTextAtom);
