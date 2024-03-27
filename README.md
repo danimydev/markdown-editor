@@ -3,7 +3,7 @@
 Cross platform desktop app for editing and previewing `.md` files. Built with Tauri and React.
 
 ## Screenshot
-![markdown](https://github.com/danimydev/markdown-editor/assets/31113489/4696e3df-8f48-4393-b026-c02ff595b0a8)
+![markdown](https://github.com/danimydev/markdown-editor/assets/31113489/57a8081d-0418-4f12-9049-27e8ad45a46e)
 
 ## Stack
 1. Tauri.
