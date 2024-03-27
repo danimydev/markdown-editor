@@ -8,16 +8,12 @@ import {
 import { Editor } from "@/components/editor";
 import { Previewer } from "@/components/previewer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
-import { OpenFile } from "./components/open-file";
+import { Controls } from "@/components/controls";
 
 export const App = () => {
   return (
     <ThemeProvider>
-      <div className="flex flex-col space-y-2 fixed top-3 right-3 opacity-50 hover:opacity-100 transition-all">
-        <ModeToggle />
-        <OpenFile />
-      </div>
+      <Controls />
       <ResizablePanelGroup direction="horizontal">
         <ResizablePanel>
           <Editor />
