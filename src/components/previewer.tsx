@@ -11,7 +11,7 @@ export const Previewer = () => {
 
   return (
     <Markdown
-      className="resize-y prose p-2 *:text-primary"
+      className="h-[100vh] overflow-y-scroll resize-y prose p-2 *:text-primary"
       remarkPlugins={[remarkGfm, remarkEmoji, remarkBreaks]}
       children={editorText}
     />
