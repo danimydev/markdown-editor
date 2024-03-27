@@ -9,7 +9,7 @@ export const Editor = () => {
 
   return (
     <Textarea
-      className="rounded-none p-2 min-h-[100vh] h-[100%] resize-none border-none"
+      className="rounded-none p-2 h-[100vh] overflow-y-scroll resize-none border-none"
       autoFocus
       placeholder="Enter markdown here..."
       value={editorText}
