@@ -1,27 +1,7 @@
-# Markdown Editor
+# Tauri + Vanilla TS
 
-Cross platform desktop app for editing and previewing `.md` files. Built with Tauri and React.
+This template should help get you started developing with Tauri in vanilla HTML, CSS and Typescript.
 
-## Screenshot
-![markdown](https://github.com/danimydev/markdown-editor/assets/31113489/57a8081d-0418-4f12-9049-27e8ad45a46e)
+## Recommended IDE Setup
 
-## Stack
-1. Tauri.
-2. React.
-3. TailwindCSS.
-4. Shadcn UI
-
-## Features
-
-- [x] Basic markdown syntax.
-- [x] Emojis.
-- [x] Footnotes & cites.
-- [x] Dark mode.
-- [x] Editor & Preview.
-- [x] Open & Save files.
-
-## Development
-
-```bash
-npm run tauri dev
-```
+- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
